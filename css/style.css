@@ -1,0 +1,71 @@
+* 
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv {
+    height: 600px;
+    width: 600px;
+    background-color: cadetblue;
+    /*border-radius: 50%;*/
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.mainDiv > div {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+    transition-duration: 3s;
+}
+
+.green {
+    background-color: green;
+} 
+
+.red {
+    position: relative;
+    animation-name: red;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes red {
+    0% {
+        top: -1000px;
+    }
+    100% {
+    top: 0;
+    }
+}
+
+.green {
+    animation-name: green;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes green {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100;
+    }
+}
+
+.yellow:hover {
+    transform: rotateY(180deg);
+}
